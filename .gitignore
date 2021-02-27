@@ -32,3 +32,11 @@ yarn-error.log*
 
 # vercel
 .vercel
+vercel.ps1
+
+# rmal
+challenges-pt.json
+language-en.json
+language-pt.json
+manifest.json
+.vercel

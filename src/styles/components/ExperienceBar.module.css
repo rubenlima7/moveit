@@ -1,0 +1,34 @@
+.experienceBar {
+  display: flex;
+  align-items: center;
+}
+
+.experienceBar span {
+  font-size: 1rem;
+}
+
+.experienceBar > div {
+  /* pega a primeira div, a partir de onde foi definida a className */
+  flex: 1;
+  height: 4px;
+  border-radius: 4px;
+  background-color: var(--gray-line);
+  margin: 0 1.5rem; /* 0 em top e bottom (eixo vertical) e 1.5 x 16px = 24px*/
+  position: relative; /* pois dentro desta div irei ter outra div com position: absolute */
+}
+
+.experienceBar > div > div {
+  height: 4px;
+  border-radius: 4px;
+  background-color: var(--green);
+  /* position: absolute; */
+}
+
+.experienceBar > div > span.currentExperience {
+  position: absolute;
+  top: 12px;
+  transform: translateX(-50%);
+  /* eu quero que o "300 xp" não comece a seguir à div mas 
+  quero sim que o seu centro seja onde acaba a div. Então faço uma transladação no eixo X 
+  de 50% para a esquerda da sua posição actual */
+}

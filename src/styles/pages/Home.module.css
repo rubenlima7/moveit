@@ -1,0 +1,22 @@
+.container {
+  height: 100vh; /* 100% da viewport height do browser */
+  max-width: 992px;
+  margin: 0 auto;
+  /* 0 no eixo vertical e auto no eixo horizontal, ou seja, irá ser feito um calculo baseado, 
+  neste caso na largura, de forma a que a margem esquerda e margem direita sejam idênticas.
+  O container irá ficar assim centralizado no centro da tela. */
+  padding: 2.5rem 2rem; /* respectivamente, 40px em top e bottom e 32px em left e right */
+
+  display: flex;
+  flex-direction: column; /* pois eu quero que os próximos elementos que estiverem abaixo de 
+  <ExperienceBar/> irão ficar um por baixo do outro */
+}
+
+.container section {
+  flex: 1;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* quero 2 colunas com tamanho igual */
+  gap: 6.25rem; /* 6.25 x 16px = 100px */
+  align-content: center;
+}

@@ -1,0 +1,58 @@
+.overlay {
+  background: rgba(242, 243, 245, 0.8);
+  position: fixed;
+
+  /* quero que ocupe a tela inteira: */
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  /* e quero que o conteúdo fique no centro do modal: */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background: var(--white);
+  width: 100%;
+  max-width: 400px;
+  padding: 2rem 3rem;
+  border-radius: 4px; /* Antes: 0.25rem / 5px */
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  position: relative; /* pois quero que o botão de fechar tenha um position absolute */
+}
+
+.container header {
+  font-size: 8.75rem; /* 8.75 x 16px = 140px */
+  font-weight: 600;
+  color: var(--blue);
+  background: url("/icons/levelup.svg") no-repeat center; /* imagem centralizada e não repetida*/
+  background-size: contain; /* Resize the background image to make sure the image is fully visible */
+}
+
+.container strong {
+  font-size: 2.25rem; /* 2.25 x 16px = 36px*/
+  color: var(--title);
+}
+
+.container p {
+  font-size: 1.25; /* 20px */
+  color: var(--text);
+  margin-top: 0.25rem; /* 4px */
+}
+
+.container button {
+  position: absolute;
+  right: 0.5rem; /* 8px */
+  top: 0.5rem;
+
+  /* para retirar os estilos padão do botão: */
+  background: transparent; /* ou none */
+  border: 0;
+
+  font-size: 0px; /* para que no botão close, o img dentro dele fique centralizado com o 
+  quadrado de outline pois, por padrão, o tamanho do botão close é baseado no font-size */
+}

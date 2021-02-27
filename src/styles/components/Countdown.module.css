@@ -1,0 +1,91 @@
+.countdownContainer {
+  display: flex;
+  align-items: center;
+  font-family: Rajdhani;
+  font-weight: 600;
+  color: var(--title);
+}
+
+.countdownContainer > div {
+  /* nas div filhas de countdownContainer */
+  flex: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  background: var(--white);
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.05);
+  border-radius: 4px; /* Antes: 0.25rem / 5px */
+  font-size: 8.5rem;
+  text-align: center;
+}
+
+.countdownContainer > div span {
+  flex: 1;
+}
+
+.countdownContainer > div span:first-child {
+  /* ambos os algarismos das décimas do timer */
+  border-right: 1px solid #f0f1f3;
+}
+
+.countdownContainer > div span:last-child {
+  /* ambos os algarismos das unidades do timer */
+  border-left: 1px solid #f0f1f3;
+}
+
+.countdownContainer > span {
+  font-size: 6.25rem;
+  margin: 0 0.5rem; /* margem horizontal de 8px */
+}
+
+.countdownButton {
+  width: 100%;
+  height: 5rem;
+
+  margin-top: 2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 0; /* para retirar a borda que o html coloca por padrão  */
+  outline: none; /* Acrescentei pois no hover aparecia uma borda */
+  border-radius: 4px; /* Antes: 0.25rem / 5px */
+
+  background: var(--blue);
+  color: var(--white);
+
+  font-size: 1.25rem;
+  font-weight: 600;
+
+  transition: background-color 0.2s;
+}
+
+/* .countdownButton:not([disabled]):hover { é o mesmo que: */
+.countdownButton:not(:disabled):hover {
+  /* só aplico este estilo no hover se o butão não estiver disabled */
+  background: var(--blue-dark);
+}
+
+.countdownButtonActive {
+  background: var(--white);
+  color: var(--title);
+}
+
+.countdownButtonActive:not(:disabled):hover {
+  background: var(--red);
+  color: var(--white);
+}
+
+.countdownButton:disabled {
+  background: var(--white);
+  color: var(--text);
+  cursor: not-allowed;
+  border-bottom: 4px solid var(--green);
+}
+
+.countdownButton img {
+  height: 1.5rem;
+}
