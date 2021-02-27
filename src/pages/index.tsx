@@ -28,7 +28,7 @@ export default function Home(props: HomeProps) {
     >
       <div className={styles.container}>
         <Head>
-          <title>Inicio | move.it</title>
+          <title>Start | move.it</title>
         </Head>
 
         <ExperienceBar />
@@ -59,7 +59,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   terei que transforma-los em números: */
   return {
     props: {
-      level: Number(level), // fazendo +level tb iria converter a string em número 
+      level: Number(level), // fazendo +level tb iria converter a string em número
       currentExperience: Number(currentExperience),
       challengesCompleted: Number(challengesCompleted),
     },
