@@ -49,7 +49,7 @@ export function CountdownProvider({ children }: CountdownProviderProps) {
     clearTimeout(countdownTimeout); // previne que o setTimeout seja executado
     setIsActive(false);
     setIsFinished(false);
-    setTime(0.1 * 60); // 6 segundos / 25 min
+    setTime(25 * 60); // 6 segundos = 0.1 / 25 min = 25
   }
 
   useEffect(() => {
